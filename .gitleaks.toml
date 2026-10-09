@@ -1,0 +1,8 @@
+title = "Detección de credenciales de laboratorio y reglas predeterminadas"
+[extend]
+useDefault = true
+[[rules]]
+id = "credencial-laboratorio-plc"
+description = "Credencial ficticia del taller escrita en un archivo"
+regex = 'LAB-CLORO-[0-9]{4}-DEMO'
+tags = ["laboratorio", "secreto"]

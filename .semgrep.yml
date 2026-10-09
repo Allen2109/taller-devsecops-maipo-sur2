@@ -1,0 +1,21 @@
+rules:
+  - id: python-shell-true
+    message: No construir comandos de shell con entradas externas.
+    severity: ERROR
+    languages: [python]
+    pattern: subprocess.run(..., shell=True, ...)
+  - id: python-tls-sin-validar
+    message: Mantener la validación de certificados TLS.
+    severity: ERROR
+    languages: [python]
+    pattern: requests.$METODO(..., verify=False, ...)
+  - id: python-yaml-inseguro
+    message: Utilizar yaml.safe_load para archivos de configuración.
+    severity: ERROR
+    languages: [python]
+    pattern: yaml.load(...)
+  - id: python-paquete-plc-no-aprobado
+    message: Dependencia de la propuesta IA sin evidencia de aprobación.
+    severity: ERROR
+    languages: [python]
+    pattern: from plc_helper_utils import $FUNC

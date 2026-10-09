@@ -1,0 +1,5 @@
+sistema: panel-operacional-laboratorio
+modo: simulacion
+puerto: 443
+origenes_permitidos:
+  - 192.0.2.0/24
