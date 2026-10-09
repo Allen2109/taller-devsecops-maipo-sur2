@@ -1,7 +1,7 @@
 # Ficha de blindaje · Maipo Sur
 
 **Curso:** SISTEMA AUTO DEVSECOPS LAB 1. **Sector:** agua potable, caso base ficticio. **Fecha:** 09-10-2026.  
-**Equipo:** Miguel Briceño (desarrollo), Franco Perez (pipeline), Marcela Manzor (operación, auditoría IA y relato). Distribución propuesta para tres integrantes.
+**Equipo:** Miguel Briceño (desarrollo), Franco Perez (pipeline), Marcela Manzor (operación y auditoría IA). Distribución propuesta para tres integrantes.
 
 ## Sistema y dibujo
 
@@ -34,7 +34,7 @@ Activados: código propio (Gitleaks y Semgrep), dependencias (Trivy y OSV) y con
 
 ## Pendientes y reproducción
 
-Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: foto del papel, exposición y práctica Gandalf por acreditar si se exige. No declaramos ayuda a otro grupo.
+Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: foto del papel y práctica Gandalf por acreditar si se exige. No declaramos ayuda a otro grupo.
 
 ```bash
 python scripts/install_tools.py && python -m pip install --require-hashes -r tools/requirements.lock

@@ -28,7 +28,7 @@ jobs:
       - name: Prueba funcional con variable de entorno
         env:
           PLC_PASSWORD: ${{ secrets.PLC_PASSWORD }}
-        run: python -m src.lector_cloro
+        run: python scripts/prueba_funcional.py
       - name: Artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:

@@ -8,7 +8,7 @@ La rúbrica del taller asigna 100 puntos y contempla tres extras. Esta matriz pe
 | Controles funcionando | 25 | Gitleaks, Semgrep, Trivy fs, OSV y Trivy config; enlaces y resultados en VALIDACION.md | Evaluar las ejecuciones reales, no el badge por sí solo |
 | Gestión de hallazgos | 20 | Tabla de decisión, motivo, responsable propuesto y fecha | Rotación, redes y validación de planta real se registran como pendientes |
 | Criterio frente a IA | 20 | Cuatro preguntas, fragmento identificable, consulta PyPI y reporte SAST; propuesta sin fusionar | El rechazo técnico preparado debe ser revisado y ratificado por el grupo |
-| Claridad para todos | 10 | Guion de 90 segundos para relatora | La exposición en vivo debe realizarla quien no tocó teclado |
+| Claridad para todos | 10 | Ficha resumida, diagrama y explicación de dos frases para el operador | El material escrito permite revisar la claridad de la explicación técnica |
 | Extra: identificadores exactos | +5 | Acciones por SHA completo, binarios por SHA-256, wheels por versión y hash | Bases del runner y bases de vulnerabilidades cambian; se explicita este límite |
 | Extra: SBOM | +5 | CycloneDX generada automáticamente y guardada como artefacto | Inventario de la aplicación; no inventario del PLC ni de todo el runner |
 | Extra: ayuda a otro grupo | +5 | No se afirma ayuda no realizada | Requiere evidencia de participación real |
