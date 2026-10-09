@@ -13,4 +13,4 @@
 
 La seguridad tardía dejaría a la planta con cambios importantes por corregir cuando ya no hay una ventana disponible. Por eso ubicamos la detección de secretos y patrones inseguros antes del paquete. El análisis estático se complementa con revisión humana, pruebas de integración industrial y monitoreo; no reemplaza estos controles.
 
-El [diagrama de una página](ciclo-devsecops.pdf) reúne las ocho fases, herramientas y roles. Se mantiene un archivo SVG editable para revisar el modelo.
+El [diagrama de una página](ciclo-devsecops.pdf) reúne las ocho fases, herramientas y roles.
