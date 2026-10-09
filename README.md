@@ -74,6 +74,12 @@ La primera línea obtiene herramientas oficiales y comprueba sus hashes. La segu
 
 La rama `main` contiene el trabajo corregido. La rama `laboratorio/credencial-expuesta` conserva exclusivamente el fallo ficticio del ejercicio inicial. La rama `auditoria/propuesta-ia` contiene la propuesta insegura para revisión y no debe fusionarse. Los análisis de historial de `main` no declaran saneadas las ramas didácticas.
 
+## Resultado verificado
+
+Los pipelines de integración y seguridad de main finalizaron correctamente. El escenario con credencial expuesta falló por Gitleaks y la propuesta de IA falló con tres hallazgos Semgrep. Se conservan [enlaces a las ejecuciones](evidencias/VALIDACION.md) y una [SBOM reproducida localmente](evidencias/sbom.cdx.json).
+
+[Descargar ficha de una página](docs/evaluacion/ficha-blindaje.pdf).
+
 ## Alcance de la entrega
 
 El taller de infraestructura crítica define la entrega principal. Los materiales de clases aportan el ciclo de ocho fases, la política de repositorios, el análisis STRIDE y el pipeline CI. Los aplicamos al caso de agua; este repositorio no pretende reemplazar el proyecto financiero SecureBank del semestre.

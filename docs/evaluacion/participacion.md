@@ -19,3 +19,7 @@ La distribución es una propuesta para organizar el trabajo y no certifica accio
 5. Registrar ayuda a otro equipo solo si ocurrió.
 
 No se incluye una foto fabricada, una firma personal ni un nivel de juego inventado.
+
+## Disponibilidad de Gandalf
+
+El 09-10-2026 el enlace indicado redirigió a https://play.lakera.ai/agent-breaker. No se observó el juego de niveles Gandalf. Se documenta la limitación externa, sin sustituirla por un nivel inventado.

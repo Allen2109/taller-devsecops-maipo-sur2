@@ -1,0 +1,7 @@
+{
+  "gitleaks": "detectado",
+  "semgrep_shell": "detectado",
+  "semgrep_tls": "detectado",
+  "trivy_infra": "detectado",
+  "codigo_inseguro_ejecutado": false
+}
