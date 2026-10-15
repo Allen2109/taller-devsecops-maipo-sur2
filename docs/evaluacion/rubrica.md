@@ -27,3 +27,7 @@ El repositorio reúne ficha, esquema, tres amenazas, controles, gestión de hall
 | Integración continua | Checkout, install, build, test y artifact por commit, retención 30 días |
 
 La actividad financiera SecureBank aparece como ejemplo del curso. No la presentamos como una aplicación implementada dentro de este taller de agua.
+
+## Práctica interactiva de IA
+
+La [práctica alternativa en Agent Breaker](../../evidencias/agent-breaker/README.md) incluye diez capturas y cinco intentos documentados: nivel 1 superado con 100/100 y cuatro rechazos en el nivel 2. Aporta evidencia de aprendizaje sobre filtración de información, pero no acredita el nivel 3 de Gandalf ni asigna puntaje por equivalencia no confirmada.

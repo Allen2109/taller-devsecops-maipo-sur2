@@ -34,10 +34,14 @@ Activados: código propio (Gitleaks y Semgrep), dependencias (Trivy y OSV) y con
 
 ## Pendientes y reproducción
 
-Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: práctica Gandalf por acreditar si se exige; fotografía del dibujo ya adjunta. No declaramos ayuda a otro grupo.
+Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: fotografía del dibujo ya adjunta; [práctica alternativa de Agent Breaker](evidencias/agent-breaker/README.md) realizada: nivel 1 con 100/100 y cuatro intentos rechazados en el nivel 2. El nivel 3 de Gandalf no está acreditado. No declaramos ayuda a otro grupo.
 
 ```bash
 python scripts/install_tools.py && python -m pip install --require-hashes -r tools/requirements.lock
 bash scripts/analizar.sh
 python scripts/pruebas_controles.py
 ```
+
+## Práctica de protección de información
+
+El 14-10-2026 realizamos Cycling Coach de Agent Breaker tras la redirección del enlace de Gandalf. El nivel 1 fue superado con 100/100 y el nivel 2 rechazó cuatro solicitudes con 0/100. El [registro de la práctica](evidencias/agent-breaker/README.md) conserva diez capturas, solicitudes, análisis y límites. No se afirma equivalencia académica con Gandalf.

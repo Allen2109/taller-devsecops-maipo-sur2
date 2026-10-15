@@ -39,3 +39,7 @@ El PR [#1](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critic
 Se conserva el diagrama digital editable y la [fotografía del dibujo en papel](diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026. La foto muestra los cinco componentes, F1-F5 y las aclaraciones sobre fronteras de confianza y simulación. La ratificación humana del veredicto corresponde a los integrantes. No se acredita ayuda a otro grupo.
 
 El enlace de Gandalf proporcionado en el curso redirigió en la revisión a `https://play.lakera.ai/agent-breaker`. La interfaz observada ofrece Agent Breaker y no mostró Gandalf con los niveles de la pauta. No se declara un nivel de Gandalf alcanzado. El docente debe indicar si acepta otra práctica o mantener este punto pendiente.
+
+## Práctica alternativa de IA · 14-10-2026
+
+Se incorporan las [diez capturas y el registro de Agent Breaker](agent-breaker/README.md), proporcionados durante la práctica. Cycling Coach: nivel 1 superado con 100/100; nivel 2 con cuatro variantes rechazadas, todas 0/100. La redirección queda documentada y no se declara alcanzado el nivel 3 de Gandalf. La protección del nivel 2 resistió estos intentos, sin que esto demuestre invulnerabilidad.

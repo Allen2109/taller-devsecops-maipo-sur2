@@ -18,6 +18,7 @@ El caso Maipo Sur es ficticio. La aplicación devuelve una lectura local de 0,7 
 | Evidencia de ejecución y hallazgos | [Validación](evidencias/VALIDACION.md) |
 | Amenazas y controles | [Modelo de amenazas](docs/modelado/amenazas.md) |
 | Diagrama del sistema | [DFD](docs/arquitectura/dfd.png) y [fotografía del dibujo en papel](evidencias/diagrama-papel.jpg) |
+| Práctica de protección de información | [Agent Breaker: intentos, resultados y capturas](evidencias/agent-breaker/README.md) |
 | Revisión del parche de IA | [Auditoría](docs/auditoria-ia/veredicto.md) |
 | Cobertura de la rúbrica | [Matriz de cumplimiento](docs/evaluacion/rubrica.md) |
 | Informes y SBOM | [Actions](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critica/actions/workflows/seguridad.yml), artefacto `seguridad-<commit>` |

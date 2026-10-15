@@ -23,3 +23,7 @@ El lector final usa `yaml.safe_load`, exige un registro entero acotado y devuelv
 “Este cambio podría permitir que una entrada manipulada ejecute órdenes con los permisos del lector y afectar la supervisión del tratamiento del agua. Además, enviaría las lecturas a un destino sin justificar y sin comprobar correctamente su certificado, por lo que rechazamos la propuesta hasta corregir esos riesgos.”
 
 Este texto se elaboró con apoyo de IA y se ajustó para expresar una consecuencia posible, sin afirmar que ocurrió un incidente ni inventar el valor de TELEMETRIA. La validación y firma de los integrantes sigue siendo una responsabilidad del grupo.
+
+## Práctica complementaria de protección de información
+
+El [registro de Cycling Coach en Agent Breaker](../../evidencias/agent-breaker/README.md) compara un nivel que permitió revelar instrucciones con otro que rechazó cuatro intentos. Esta práctica es distinta de la revisión del parche de código y refuerza la decisión de no entregar credenciales al asistente de Maipo Sur. Sus diez capturas documentan la ejecución; no sustituyen la ratificación del veredicto por el grupo.
