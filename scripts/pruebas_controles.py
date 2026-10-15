@@ -30,7 +30,6 @@ def main():
             raise RuntimeError("No se detectaron ambos defectos del parche")
         infra = t / "infra"
         infra.mkdir()
-        (infra/"abierto.tf").write_text('resource "aws_security_group" "panel" {\n name = "demo"\n description = "demo"\n ingress {\n from_port = 22\n to_port = 22\n protocol = "tcp"\n cidr_blocks = ["0.0.0.0/0"]\n }\n}\n')
         (infra/"panel.yaml").write_text("sistema: panel-operacional-laboratorio\norigenes_permitidos: [0.0.0.0/0]\n")
         ejecutar(["trivy", "config", "--config-check", "policies/", "--check-namespaces", "builtin,user", "--misconfig-scanners", "terraform,yaml", "--rego-error-limit", "0", "--severity", "HIGH,CRITICAL", "--exit-code", "1", "--format", "json", "--output", str(reports/"negativo-trivy.json"), str(infra)], 1)
         datos=json.loads((reports/"negativo-trivy.json").read_text())
