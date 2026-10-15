@@ -5,7 +5,7 @@
 
 ## Sistema y dibujo
 
-El lector muestra una lectura simulada de cloro. Una alteración o interrupción en una planta real podría afectar el tratamiento del agua y dejar al turno sin información confiable. [DFD digital](docs/arquitectura/dfd.png) y [archivo editable](docs/arquitectura/dfd.drawio). El dibujo digital no se presenta como fotografía de una actividad presencial.
+El lector muestra una lectura simulada de cloro. Una alteración o interrupción en una planta real podría afectar el tratamiento del agua y dejar al turno sin información confiable. [DFD digital](docs/arquitectura/dfd.png) y [archivo editable](docs/arquitectura/dfd.drawio). Se adjunta la [fotografía del dibujo en papel](evidencias/diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026.
 
 ## Tres amenazas priorizadas
 
@@ -34,7 +34,7 @@ Activados: código propio (Gitleaks y Semgrep), dependencias (Trivy y OSV) y con
 
 ## Pendientes y reproducción
 
-Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: foto del papel y práctica Gandalf por acreditar si se exige. No declaramos ayuda a otro grupo.
+Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: práctica Gandalf por acreditar si se exige; fotografía del dibujo ya adjunta. No declaramos ayuda a otro grupo.
 
 ```bash
 python scripts/install_tools.py && python -m pip install --require-hashes -r tools/requirements.lock

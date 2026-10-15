@@ -4,7 +4,7 @@ La rúbrica del taller asigna 100 puntos y contempla tres extras. Esta matriz pe
 
 | Criterio | Puntos | Evidencia preparada | Límite de acreditación |
 |---|---|---|---|
-| Modelado de amenazas | 25 | Tres prioridades con efecto en agua y tratamiento, STRIDE, riesgo y DFD; modelo ampliado | Dibujo digital incluido; foto de papel presencial por incorporar si el docente la exige literalmente |
+| Modelado de amenazas | 25 | Tres prioridades con efecto en agua y tratamiento, STRIDE, riesgo y DFD; modelo ampliado | Dibujo digital y [fotografía del dibujo en papel](../../evidencias/diagrama-papel.jpg) incluidos; la foto no acredita por sí sola todas las actividades del grupo |
 | Controles funcionando | 25 | Gitleaks, Semgrep, Trivy fs, OSV y Trivy config; enlaces y resultados en VALIDACION.md | Evaluar las ejecuciones reales, no el badge por sí solo |
 | Gestión de hallazgos | 20 | Tabla de decisión, motivo, responsable propuesto y fecha | Rotación, redes y validación de planta real se registran como pendientes |
 | Criterio frente a IA | 20 | Cuatro preguntas, fragmento identificable, consulta PyPI y reporte SAST; propuesta sin fusionar | El rechazo técnico preparado debe ser revisado y ratificado por el grupo |

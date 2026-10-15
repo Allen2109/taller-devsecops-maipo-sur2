@@ -20,6 +20,6 @@ La implementación es más acotada: un programa local valida configuración y va
 
 El lector del laboratorio no transmite F1-F5 por una red. El diagrama muestra dónde deben ubicarse los controles en la arquitectura propuesta. El archivo Terraform representa la restricción del panel, no configura redes industriales reales.
 
-Archivo editable: [dfd.drawio](dfd.drawio). El PNG conserva flechas y fronteras de confianza. Se entrega un dibujo digital porque no existe una foto del ejercicio presencial proporcionada por el grupo.
+Archivo editable: [dfd.drawio](dfd.drawio). El PNG conserva flechas y fronteras de confianza. El grupo proporcionó el 14-10-2026 la [fotografía del dibujo en papel](../../evidencias/diagrama-papel.jpg), que complementa este modelo digital.
 
 `infra/panel.yaml` expresa la política operacional equivalente al modelo Terraform. Trivy usa la regla local `LAB-ICS-001` para impedir origen global, además de sus checks generales. No se crean recursos cloud.

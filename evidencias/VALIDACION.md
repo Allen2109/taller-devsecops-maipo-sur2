@@ -36,6 +36,6 @@ El PR [#1](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critic
 
 ## Límites de la evaluación
 
-Se entregó un diagrama digital editable, no una fotografía del dibujo en papel. La ratificación humana del veredicto corresponde a los integrantes. No se acredita ayuda a otro grupo.
+Se conserva el diagrama digital editable y la [fotografía del dibujo en papel](diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026. La foto muestra los cinco componentes, F1-F5 y las aclaraciones sobre fronteras de confianza y simulación. La ratificación humana del veredicto corresponde a los integrantes. No se acredita ayuda a otro grupo.
 
 El enlace de Gandalf proporcionado en el curso redirigió en la revisión a `https://play.lakera.ai/agent-breaker`. La interfaz observada ofrece Agent Breaker y no mostró Gandalf con los niveles de la pauta. No se declara un nivel de Gandalf alcanzado. El docente debe indicar si acepta otra práctica o mantener este punto pendiente.

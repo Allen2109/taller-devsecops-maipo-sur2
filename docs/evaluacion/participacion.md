@@ -12,7 +12,7 @@ La distribución es una propuesta para organizar el trabajo y no certifica accio
 
 ## Lo que requiere participación real
 
-1. Adjuntar la foto del dibujo en papel si se exige esa evidencia literal. Ya existe una representación digital editable del sistema.
+1. Fotografía del dibujo en papel incorporada: [diagrama-papel.jpg](../../evidencias/diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026.
 2. Revisar y ratificar el veredicto sobre IA como grupo.
 3. Si corresponde al curso, completar Gandalf y adjuntar una captura del nivel alcanzado, sin publicar contraseñas del juego.
 4. Registrar ayuda a otro equipo solo si ocurrió.

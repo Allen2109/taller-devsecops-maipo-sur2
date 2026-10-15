@@ -17,7 +17,7 @@ El caso Maipo Sur es ficticio. La aplicación devuelve una lectura local de 0,7 
 | Ficha del taller | [ENTREGABLE.md](ENTREGABLE.md) |
 | Evidencia de ejecución y hallazgos | [Validación](evidencias/VALIDACION.md) |
 | Amenazas y controles | [Modelo de amenazas](docs/modelado/amenazas.md) |
-| Diagrama del sistema | [DFD](docs/arquitectura/dfd.png) |
+| Diagrama del sistema | [DFD](docs/arquitectura/dfd.png) y [fotografía del dibujo en papel](evidencias/diagrama-papel.jpg) |
 | Revisión del parche de IA | [Auditoría](docs/auditoria-ia/veredicto.md) |
 | Cobertura de la rúbrica | [Matriz de cumplimiento](docs/evaluacion/rubrica.md) |
 | Informes y SBOM | [Actions](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critica/actions/workflows/seguridad.yml), artefacto `seguridad-<commit>` |
@@ -84,7 +84,7 @@ Los pipelines de integración y seguridad de main finalizaron correctamente. El 
 
 El taller de infraestructura crítica define la entrega principal. Los materiales de clases aportan el ciclo de ocho fases, la política de repositorios, el análisis STRIDE y el pipeline CI. Los aplicamos al caso de agua; este repositorio no pretende reemplazar el proyecto financiero SecureBank del semestre.
 
-Las evidencias solo registran ejecuciones observadas. La fotografía de una actividad presencial y la ayuda a otro grupo deben acreditarse por quienes las realicen. El diagrama digital incluido es una reconstrucción del modelo, no una fotografía del trabajo en clase.
+Las evidencias solo registran ejecuciones observadas. La [fotografía del dibujo en papel](evidencias/diagrama-papel.jpg) fue proporcionada por el grupo el 14-10-2026. La ayuda a otro grupo solo se acredita si ocurrió. El diagrama digital incluido es una reconstrucción del modelo, no una fotografía del trabajo en clase.
 
 ## Correspondencia con la estructura recomendada
 
