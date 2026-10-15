@@ -17,18 +17,28 @@ Asignamos valores 1 a 3 a probabilidad e impacto. 1-2 es bajo, 3-4 medio y 6-9 a
 
 | ID | Flujo o activo | Categoría | Vulnerabilidad / amenaza | P | I | Riesgo | Mitigación y estado |
 |---|---|---|---|---|---|---|---|
-| A01 | Credencial, F3 | S/I | Secreto publicado permite suplantación | 3 | 3 | 9 | Corregida referencia; rotación real no aplica a un valor ficticio |
+| A01 | Credencial, F1/F3 | S/I | Secreto publicado permite suplantación | 3 | 3 | 9 | Referencia corregida y sustitución simulada probada; sin revocación en PLC real |
 | A02 | F2-F3 | T/E | Entrada externa convertida en shell | 3 | 3 | 9 | Código local sin shell y pruebas de rechazo |
 | A03 | Panel, TB2 | E/D | Regla de cualquier origen permite acceso y saturación | 2 | 3 | 6 | Restricción estática; infraestructura real no desplegada |
 | A04 | Lectura F4 | T | Valor no numérico o fuera de rango induce decisiones incorrectas | 2 | 3 | 6 | Validador probado; falta sensor y firma/origen de lectura real |
 | A05 | Eventos del turno | R | Sin auditoría no se puede atribuir un ajuste y corregir su causa | 2 | 3 | 6 | Registro mínimo local; auditoría inmutable y autenticación pendientes |
 | A06 | Bibliotecas | T/E | Componente vulnerable o sustituido compromete el lector | 2 | 3 | 6 | Lock con hashes, Trivy, OSV y SBOM |
-| A07 | F5, asistente | I | Prompt injection solicita el secreto e información operacional | 3 | 3 | 9 | Propuesta: no entregar secretos al modelo; ejercicio externo por acreditar |
+| A07 | F5, asistente | I | Prompt injection solicita el secreto e información operacional | 3 | 3 | 9 | Diseño sin secretos; práctica Agent Breaker documentada en evidencias/agent-breaker, sin agente integrado al lector |
 | A08 | F5, permisos | E | Asistente autoriza comandos de escritura fuera de su función | 2 | 3 | 6 | Diseño de solo consulta; no existe agente con herramientas en el simulador |
 | A09 | Lector | D | Consultas ilimitadas agotan recursos y dejan al turno sin lectura | 2 | 3 | 6 | Servicio remoto y rate limiting pendientes; CLI local sin exposición |
-| A10 | Repositorio/pipeline | T | Cambios sin revisión o acción de terceros alterada introducen código inseguro | 2 | 3 | 6 | SHAs, hashes, permisos mínimos y CODEOWNERS; revisar protección efectiva |
+| A10 | Repositorio/pipeline | T | Cambios sin revisión o acción de terceros alterada introducen código inseguro | 2 | 3 | 6 | SHAs, hashes, permisos mínimos, CODEOWNERS y protección activa de main; revisión humana de cada cambio |
 | A11 | Telemetría F4 | I/T | TLS desactivado y destino externo permiten fuga o alteración | 2 | 3 | 6 | Parche rechazado; Semgrep detecta verify=False; sin telemetría en versión final |
 | A12 | Disponibilidad | D | Despliegue sin rollback interrumpe la lectura en turno crítico | 2 | 3 | 6 | Paquete trazable; validación de fabricante, ventana y rollback pendientes |
+
+## Relación entre flujos y amenazas
+
+| Flujo del DFD | Amenaza vinculada | Control y alcance |
+|---|---|---|
+| F1 · Operador → HMI | A01: suplantación de identidad; A05: operación sin atribución | Identidad, rol y auditoría propuestos; la interfaz HMI no está implementada. |
+| F2 · HMI → lector | A02: registro manipulado o entrada tipo comando | Validación de entero y rango implementada y probada; sin shell. |
+| F3 · Lector → PLC | A01: uso indebido de credencial; A03: acceso desde red abierta | Variable de entorno y análisis de política implementados; PLC y segmentación física solo modelados. |
+| F4 · PLC → lector → HMI | A04: lectura alterada; A11: fuga o alteración de telemetría | Validador y rechazo del parche implementados; integridad del sensor real pendiente. |
+| F5 · IA → lector | A07: extracción por prompt injection; A08: escalamiento a escritura | Diseño de consulta sin secretos y práctica externa documentada; no existe agente con herramientas en el programa. |
 
 ## Activos y debilidades
 

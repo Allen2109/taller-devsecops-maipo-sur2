@@ -1,17 +1,17 @@
 # Ficha de blindaje · Maipo Sur
 
 **Curso:** SISTEMA AUTO DEVSECOPS LAB 1. **Sector:** agua potable, caso base ficticio. **Fecha:** 09-10-2026.  
-**Equipo:** Miguel Briceño (desarrollo), Franco Perez (pipeline), Marcela Manzor (operación, auditoría IA y relato). Distribución propuesta para tres integrantes.
+**Equipo:** Miguel Briceño (desarrollo), Franco Perez (pipeline), Marcela Manzor (operación y auditoría IA). Distribución propuesta para tres integrantes.
 
 ## Sistema y dibujo
 
-El lector muestra una lectura simulada de cloro. Una alteración o interrupción en una planta real podría afectar el tratamiento del agua y dejar al turno sin información confiable. [DFD digital](docs/arquitectura/dfd.png) y [archivo editable](docs/arquitectura/dfd.drawio). El dibujo digital no se presenta como fotografía de una actividad presencial.
+El lector muestra una lectura simulada de cloro. Una alteración o interrupción en una planta real podría afectar el tratamiento del agua y dejar al turno sin información confiable. [DFD digital](docs/arquitectura/dfd.png) y [archivo editable](docs/arquitectura/dfd.drawio). Se adjunta la [fotografía del dibujo en papel](evidencias/diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026.
 
 ## Tres amenazas priorizadas
 
 | Amenaza | STRIDE | Impacto físico | Control |
 |---|---|---|---|
-| Credencial publicada | S/I | Suplantar al turno y alterar o bloquear supervisión del tratamiento | Gitleaks, secreto fuera del código, rotación antes de operación real |
+| Credencial publicada | S/I | Suplantar al turno y alterar o bloquear supervisión del tratamiento | Gitleaks, secreto fuera del código, sustitución simulada comprobada; revocación antes de operación real |
 | Entrada convertida en comando | T/E | Ejecutar acciones indebidas y producir lecturas u órdenes alteradas | Semgrep y validación de entradas; lector sin shell |
 | Panel expuesto a cualquier origen | E/D | Impedir el acceso del turno y retrasar la respuesta ante tratamiento incorrecto | Trivy config y modelo de acceso restringido |
 
@@ -30,14 +30,22 @@ Activados: código propio (Gitleaks y Semgrep), dependencias (Trivy y OSV) y con
 
 ## Veredicto sobre IA
 
-**Rechazado técnicamente.** Paquete: PyPI devolvió HTTP 404, sin origen aprobado. Entradas: concatena host y registro en shell. Protección: `verify=False` desactiva validación TLS. Destino: `TELEMETRIA` no definido en el fragmento; envío no solicitado. [Evidencia y explicación de dos frases](docs/auditoria-ia/veredicto.md). La ratificación personal corresponde al grupo.
+**Rechazado técnicamente.** Paquete: PyPI devolvió HTTP 404, sin origen aprobado. Entradas: concatena host y registro en shell. Protección: `verify=False` desactiva validación TLS. Destino: `TELEMETRIA` no definido en el fragmento; envío no solicitado. [Evidencia del análisis](docs/auditoria-ia/veredicto.md).
+
+**Explicación para operación:** Este cambio podría permitir que una entrada manipulada ejecute órdenes con los permisos del lector y afectar la supervisión del tratamiento del agua. Además, enviaría las lecturas a un destino sin justificar y sin comprobar correctamente su certificado, por lo que rechazamos la propuesta hasta corregir esos riesgos.
+
+El borrador se elaboró con asistencia de IA y se corrigió para expresar consecuencias posibles, sin inventar el destino de `TELEMETRIA`. La ratificación personal corresponde al grupo.
 
 ## Pendientes y reproducción
 
-Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: foto del papel, exposición y práctica Gandalf por acreditar si se exige. No declaramos ayuda a otro grupo.
+Antes de una planta real: credenciales rotadas y auditadas, autorización por rol, segmentación efectiva, pruebas con fabricante, límites de consulta, auditoría protegida y rollback. Para la evaluación presencial: fotografía del dibujo ya adjunta; [práctica alternativa de Agent Breaker](evidencias/agent-breaker/README.md) realizada: nivel 1 con 100/100 y cuatro intentos rechazados en el nivel 2. No declaramos ayuda a otro grupo.
 
 ```bash
 python scripts/install_tools.py && python -m pip install --require-hashes -r tools/requirements.lock
 bash scripts/analizar.sh
 python scripts/pruebas_controles.py
 ```
+
+## Práctica de protección de información
+
+El 14-10-2026 realizamos Cycling Coach de Agent Breaker tras la redirección del enlace de Gandalf. El nivel 1 fue superado con 100/100 y el nivel 2 rechazó cuatro solicitudes con 0/100. El [registro de la práctica](evidencias/agent-breaker/README.md) conserva diez capturas, solicitudes, análisis y límites. No se afirma equivalencia académica con Gandalf.

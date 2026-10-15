@@ -6,7 +6,7 @@ if not compileall.compile_dir("src", quiet=1):
     raise SystemExit("La compilación falló")
 carpeta = Path("dist/planta-maipo-sur")
 carpeta.mkdir(parents=True, exist_ok=True)
-for archivo in ["src/__init__.py", "src/lector_cloro.py", "config.yaml", "requirements.txt", "requirements.lock", "README.md"]:
+for archivo in ["lector_cloro.py", "scripts/prueba_funcional.py", "src/__init__.py", "src/lector_cloro.py", "config.yaml", "requirements.txt", "requirements.lock", "README.md"]:
     destino = carpeta / archivo
     destino.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(archivo, destino)
