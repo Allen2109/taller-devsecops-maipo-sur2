@@ -18,7 +18,7 @@ En pasos con `continue-on-error`, GitHub puede mostrar la conclusión del paso c
 - Gitleaks de archivos y de historial de main: correctos en la versión final. El historial de las ramas didácticas conserva el valor ficticio; no se declara limpio el repositorio completo con todas las ramas.
 - Semgrep: cuatro reglas válidas. Detecta paquete no aprobado, shell y TLS desactivado en la propuesta.
 - Trivy fs y OSV: dependencia PyYAML 6.0.3 revisada, sin vulnerabilidades bloqueantes en la consulta realizada.
-- Trivy config: modelo de red restringido; regla local LAB-ICS-001 detecta origen global en prueba temporal. El check general de Terraform detecta SSH abierto en el otro ejemplo.
+- Trivy config: modelo de red restringido; regla local LAB-ICS-001 detecta origen global en prueba temporal. El modelo Terraform solo contiene variables y locales, sin recursos ni providers. La prueba negativa usa únicamente YAML inerte y exige detectar LAB-ICS-001.
 - Diez pruebas funcionales: lectura, ausencia de variable, variable vacía, no filtración, entradas tipo comando, límites de registro, configuración insegura, modo real y valores inválidos.
 - Pruebas negativas: los defectos se escriben en una carpeta temporal; el código inseguro nunca se ejecuta.
 
@@ -30,12 +30,24 @@ La [SBOM conservada en el repositorio](sbom.cdx.json) proviene de la reproducci�
 
 ## Colaboración y revisión
 
-`Maaar777` tiene permiso write comprobado y aparece como Marcela Manzor. `DonnyA32` tiene invitación pendiente y no dispondrá de escritura hasta aceptarla. Las cuentas se incorporaron a CODEOWNERS sin inventar otras identidades.
+`Maaar777` (Marcela Manzor) y `DonnyA32` (Franco Perez) tienen permiso write comprobado el 14-10-2026; ambos aceptaron la colaboración. Las cuentas se incorporaron a CODEOWNERS sin inventar otras identidades.
 
 El PR [#1](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critica/pull/1) conserva el parche de IA abierto en borrador, sin fusionar. El repositorio recibió una carga inicial directa para construir la entrega desde cero. No afirmamos que esa carga haya sido revisada o firmada personalmente por los tres integrantes. Las reglas para cambios posteriores se registran en `configuracion-repositorio.md`.
 
 ## Límites de la evaluación
 
-Se entregó un diagrama digital editable, no una fotografía del dibujo en papel. La exposición y ratificación humana del veredicto deben realizarlas los integrantes. No se acredita ayuda a otro grupo.
+Se conserva el diagrama digital editable y la [fotografía del dibujo en papel](diagrama-papel.jpg), proporcionada por el grupo el 14-10-2026. La foto muestra los cinco componentes, F1-F5 y las aclaraciones sobre fronteras de confianza y simulación. La ratificación humana del veredicto corresponde a los integrantes. No se acredita ayuda a otro grupo.
 
-El enlace de Gandalf proporcionado en el curso redirigió en la revisión a `https://play.lakera.ai/agent-breaker`. La interfaz observada ofrece Agent Breaker y no mostró Gandalf con los niveles de la pauta. No se declara un nivel de Gandalf alcanzado. El docente debe indicar si acepta otra práctica o mantener este punto pendiente.
+El enlace de Gandalf proporcionado en el curso redirigió en la revisión a `https://play.lakera.ai/agent-breaker`. La interfaz observada ofrece Agent Breaker y no mostró Gandalf con los niveles de la pauta. No se declara un nivel de Gandalf alcanzado. La práctica alternativa se conserva como evidencia propia; no se afirma equivalencia con niveles de otro juego.
+
+## Práctica alternativa de IA · 14-10-2026
+
+Se incorporan las [diez capturas y el registro de Agent Breaker](agent-breaker/README.md), proporcionados durante la práctica. Cycling Coach: nivel 1 superado con 100/100; nivel 2 con cuatro variantes rechazadas, todas 0/100. La redirección queda documentada y no se declara alcanzado el nivel 3 de Gandalf. La protección del nivel 2 resistió estos intentos, sin que esto demuestre invulnerabilidad.
+
+## Cierre de revisión · 14-10-2026
+
+Se añadieron la relación explícita F1-F5 con amenazas, las dos frases para operación en la ficha, el estado real de permisos y protección y la rotación simulada reproducible. Semgrep incluye también el lector de la raíz. Se retiraron todos los recursos Terraform para conservar un modelo inerte; la detección de red abierta continúa mediante LAB-ICS-001 y su prueba negativa obligatoria.
+
+La rotación simulada se ejecuta en procesos aislados con valores ficticios distintos y bloqueo al retirar la variable. El informe no contiene sus valores. La sustitución adicional del secreto de GitHub solicitó verificación de acceso y no se declara completada. Ver `docs/seguridad/secretos.md`.
+
+Ejecuciones previas verificadas del PR #2: [integración 38670675626](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critica/actions/runs/38670675626) y [seguridad 38670675663](https://github.com/miguelbriceno-sys/Taller-de-infraestructura-critica/actions/runs/38670675663), ambas correctas. El artefacto de seguridad tiene ID 11944057032. Las comprobaciones del cierre se consultan en el PR y sus checks; no se atribuyen a esta revisión resultados anteriores como si fueran nuevos.

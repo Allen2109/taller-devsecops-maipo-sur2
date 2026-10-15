@@ -23,3 +23,21 @@ El lector final usa `yaml.safe_load`, exige un registro entero acotado y devuelv
 “Este cambio podría permitir que una entrada manipulada ejecute órdenes con los permisos del lector y afectar la supervisión del tratamiento del agua. Además, enviaría las lecturas a un destino sin justificar y sin comprobar correctamente su certificado, por lo que rechazamos la propuesta hasta corregir esos riesgos.”
 
 Este texto se elaboró con apoyo de IA y se ajustó para expresar una consecuencia posible, sin afirmar que ocurrió un incidente ni inventar el valor de TELEMETRIA. La validación y firma de los integrantes sigue siendo una responsabilidad del grupo.
+
+## Práctica complementaria de protección de información
+
+El [registro de Cycling Coach en Agent Breaker](../../evidencias/agent-breaker/README.md) compara un nivel que permitió revelar instrucciones con otro que rechazó cuatro intentos. Esta práctica es distinta de la revisión del parche de código y refuerza la decisión de no entregar credenciales al asistente de Maipo Sur. Sus diez capturas documentan la ejecución; no sustituyen la ratificación del veredicto por el grupo.
+
+## Veredicto técnico para revisión del equipo
+
+**Texto preparado para validación grupal · 14-10-2026.** Esta redacción no acredita una revisión o firma personal de los tres integrantes.
+
+> Rechazamos la integración del parche de IA en su estado actual. La propuesta incorpora una dependencia sin un origen verificado, convierte entradas en comandos mediante el shell, desactiva la validación del certificado HTTPS y transmite información a un destino que no está definido en el fragmento original.
+>
+> En una planta de agua, estos problemas podrían afectar la disponibilidad y confiabilidad de la supervisión. Por eso mantenemos el lector simulado validado y la credencial fuera del código. Cualquier futura integración con equipos reales requerirá una dependencia verificada, ejecución sin shell, validación estricta de entradas, comprobación del certificado y autorización explícita de los datos y su destino.
+>
+> La práctica de Agent Breaker refuerza nuestra decisión de no entregar secretos al asistente. El nivel 1 permitió revelar instrucciones internas; el nivel 2 rechazó los cuatro intentos realizados. Estos resultados describen el entorno del desafío y no demuestran que una defensa sea invulnerable.
+
+**Criterio de aceptación de una futura corrección:** origen y versión verificables de la dependencia; entradas tipadas y acotadas; ejecución sin intérprete de comandos; TLS validado; destino, finalidad y datos autorizados; pruebas funcionales y de seguridad correctas; revisión independiente antes de integrar.
+
+La aprobación personal debe registrarse desde las cuentas de quienes revisen el cambio. No se incorporan firmas, aprobaciones ni intervenciones atribuidas a otros integrantes.
