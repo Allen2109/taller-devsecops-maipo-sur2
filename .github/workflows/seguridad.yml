@@ -40,7 +40,7 @@ jobs:
       - name: Semgrep codigo
         id: sast
         continue-on-error: true
-        run: semgrep scan --metrics off --config .semgrep.yml --error --json --output reports/semgrep.json src scripts tests
+        run: semgrep scan --metrics off --config .semgrep.yml --error --json --output reports/semgrep.json lector_cloro.py src scripts tests
       - name: Trivy dependencias
         id: sca
         continue-on-error: true

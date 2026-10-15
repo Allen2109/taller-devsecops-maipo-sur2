@@ -10,7 +10,7 @@ Cada amenaza tiene una historia y un criterio observable. La prioridad se define
 | SS04 | A04 | Como operador, necesito rechazar valores inválidos. NaN, infinito y datos fuera del rango didáctico fallan. | Miguel | Implementado y probado |
 | SS05 | A05 | Como auditor, necesito atribuir órdenes a una identidad. Toda modificación debe registrar identidad y tiempo en almacenamiento protegido. | Marcela | Propuesto; 16-10-2026 |
 | SS06 | A06 | Como guardián, necesito inventario verificable. Dependencia fijada y con hash, escaneos y SBOM generada. | Franco | Implementado |
-| SS07 | A07 | Como operador, necesito que la IA no reciba credenciales. Pruebas de inyección no deben revelar datos ni habilitar herramientas. | Marcela | Diseño; práctica Gandalf por acreditar |
+| SS07 | A07 | Como operador, necesito que la IA no reciba credenciales. Pruebas de inyección no deben revelar datos ni habilitar herramientas. | Marcela | Diseño y práctica Agent Breaker documentada; sin agente conectado al lector |
 | SS08 | A08 | Como operador, necesito impedir escrituras de IA. Cuenta del asistente solo lectura y aprobación humana externa para cambios. | Marcela | Propuesto; sin agente desplegado |
 | SS09 | A09 | Como turno, necesito lectura disponible. Carga y rate limiting deben demostrar límites y alertas antes del despliegue. | Franco | Pendiente; 16-10-2026 |
 | SS10 | A10 | Como revisor, necesito bloquear merges inseguros. PR, revisión y status checks obligatorios sobre main. | Franco | Ver estado efectivo en evidencias |

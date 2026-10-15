@@ -28,11 +28,15 @@ jobs:
       - name: Prueba funcional con variable de entorno
         env:
           PLC_PASSWORD: ${{ secrets.PLC_PASSWORD }}
-        run: python -m src.lector_cloro
+        run: python scripts/prueba_funcional.py
+      - name: Rotación simulada sin equipos reales
+        run: python scripts/simular_rotacion.py
       - name: Artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: dist-${{ github.sha }}
-          path: dist/planta-maipo-sur.zip
+          path: |
+            dist/planta-maipo-sur.zip
+            reports/rotacion-simulada.json
           retention-days: 30
           if-no-files-found: error
